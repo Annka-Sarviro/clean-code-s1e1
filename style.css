@@ -5,43 +5,6 @@ body {
   font-family: Lato, sans-serif;
 }
 
-.aaa {
-  width: 500px;
-  margin: 0 auto;
-  display: block;
-  text-align: right;
-}
-
-.aaa img {
-  width: 100%;
-}
-
-.aaa .more_inf {
-  font-family: fantasy, cursive;
-}
-
-@media (max-width:768px) {
-  .aaa {
-    text-align: center;
-  }
-}
-
-.centered-main-page-element {
-  display: block;
-  width: 500px;
-  margin: 0 auto 0;
-}
-
-.task {
-  width: 56%;
-  display: inline-block;
-  flex-grow: 1
-}
-
-.task-row-wrapper {
-  display: flex;
-}
-
 ul {
   margin: 0;
   padding: 0px;
@@ -57,7 +20,46 @@ button {
   outline: none;
 }
 
-button {
+.header-wrapper {
+  width: 500px;
+  margin: 0 auto;
+  display: block;
+  text-align: right;
+}
+
+.header-img {
+  width: 100%;
+}
+
+.header-wrapper .more-inf {
+  font-family: fantasy, cursive;
+}
+
+@media (max-width:768px) {
+
+  .header-wrapper {
+    text-align: center;
+  }
+
+}
+
+.todo-wrapper {
+  display: block;
+  width: 500px;
+  margin: 0 auto 0;
+}
+
+.task {
+  width: 56%;
+  display: inline-block;
+  flex-grow: 1
+}
+
+.task-wrapper {
+  display: flex;
+}
+
+.button {
   background: none;
   border: 0px;
   color: #888;
@@ -67,12 +69,12 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.button:hover {
   color: #3a3a3a;
 }
 
 /* Heading */
-h3,
+.title,
 label[for="new-task"] {
   color: #333;
   font-weight: 700;
@@ -152,7 +154,8 @@ button.delete img:hover {
 
 /* Completed */
 ul#completed-tasks label {
-  text-decoration: line-through color: #888;
+  text-decoration: line-through;
+  color: #888;
 }
 
 /* Edit Task */
@@ -160,11 +163,11 @@ ul li input[type=text] {
   display: none
 }
 
-ul li.editMode input[type=text] {
+ul li.edit-mode input[type=text] {
   display: inline-block;
   width: 224px
 }
 
-ul li.editMode label {
+ul li.edit-mode label {
   display: none;
 }
